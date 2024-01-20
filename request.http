@@ -1,0 +1,51 @@
+POST http://localhost:4004/api/users/register
+Content-Type: application/json
+
+{
+    "name" : "minhcao",
+    "email" : "minhminh@gmail.com",
+    "password": "123@Minhcao"
+}
+
+###
+POST http://localhost:4004/api/users/login
+Content-Type: application/json
+
+{
+    "email" : "minhcao@gmail.com",
+    "password": "123@Minhcao"
+}
+
+###
+GET http://localhost:4004/api/users/find/65a7d090440c0d6798f568a2
+
+###
+GET http://localhost:4004/api/users
+
+###
+POST http://localhost:4004/api/chats
+Content-Type: application/json
+
+{
+    "firstId": "65a7d090440c0d6798f568a2",
+    "secondId": "65a95be862e5e531d03522c2"
+}
+
+###
+GET http://localhost:4004/api/chats/65a7d090440c0d6798f568a2
+
+###
+GET http://localhost:4004/api/chats/find/65a7d090440c0d6798f568a2/65a95be862e5e531d03522c2
+
+###
+POST http://localhost:4004/api/messages
+Content-Type: application/json
+
+{
+    "chatId": "65aa341ee3da0c73ab73ae49",
+    "senderId": "65a95be862e5e531d03522c2",
+    "text": "hello"
+}
+
+###
+GET http://localhost:4004/api/messages/65a9f9719e26b1253db38ae1
